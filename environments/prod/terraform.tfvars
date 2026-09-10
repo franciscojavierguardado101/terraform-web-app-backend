@@ -1,0 +1,5 @@
+aws_region  = "us-east-1"
+environment = "prod"
+db_name     = "webapp_prod"
+db_username = "webapp_admin"
+# db_password is NOT here — set it with: export TF_VAR_db_password="yourpassword"
