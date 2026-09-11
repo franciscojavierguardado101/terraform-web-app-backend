@@ -26,7 +26,7 @@ resource "aws_security_group" "rds" {
 
 # Subnet group — RDS needs to know which private subnets it can use
 resource "aws_db_subnet_group" "rds" {
-  name       = "${var.environment}-rds-subnet-group"
+  name       = "${var.environment}-webapp-rds-subnet-group"
   subnet_ids = var.private_subnet_ids
 
   tags = {
@@ -36,7 +36,7 @@ resource "aws_db_subnet_group" "rds" {
 
 # PostgreSQL database instance in the private subnet
 resource "aws_db_instance" "postgres" {
-  identifier        = "${var.environment}-postgres"
+  identifier        = "${var.environment}-webapp-postgres"
   engine            = "postgres"
   engine_version    = "16"
   instance_class    = var.instance_class
