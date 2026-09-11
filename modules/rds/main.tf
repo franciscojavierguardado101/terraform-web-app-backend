@@ -1,7 +1,7 @@
 # Security group for RDS — only allows connections from the EC2 security group
 resource "aws_security_group" "rds" {
   name        = "${var.environment}-rds-sg"
-  description = "Security group for RDS — only EC2 web server can connect"
+  description = "Security group for RDS - only EC2 web server can connect"
   vpc_id      = var.vpc_id
 
   ingress {

@@ -32,7 +32,7 @@ resource "aws_security_group" "ec2" {
   }
 
   ingress {
-    description = "SSH — restrict this to your IP in production"
+    description = "SSH - restrict this to your IP in production"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
